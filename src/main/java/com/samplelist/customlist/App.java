@@ -10,7 +10,7 @@ import java.util.List;
 public class App {
 	public static void main(String[] args) {
 
-		CustomList<Student> customStudentList = new CustomList<>();
+		CustomList<Student> customStudentList = new CustomList<Student>();
 		Student student = new Student(1, "Rahat", "CS");
 		Student student1 = new Student(2, "Jubayer", "CS");
 		Student student2 = new Student(3, "Benjir", "EEE");
@@ -28,7 +28,7 @@ public class App {
 
 		}
 
-		List<Student> studentList = new ArrayList<>();
+		List<Student> studentList = new ArrayList<Student>();
 		studentList.add(student);
 		studentList.add(student1);
 		studentList.add(student2);
