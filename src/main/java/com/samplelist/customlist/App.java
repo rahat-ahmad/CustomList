@@ -19,7 +19,7 @@ public class App {
 		customStudentList.add(student1);
 		customStudentList.add(student2);
 
-		for (int i = 0; i < customStudentList.customListSize() - 1; i++) {
+		for (int i = 0; i < customStudentList.customListSize(); i++) {
 
 			System.out.print(customStudentList.getIndexOf(i).getId() + "   ");
 			System.out.print(customStudentList.getIndexOf(i).getName() + "   ");
@@ -39,7 +39,7 @@ public class App {
 		System.out.println("New Print");
 		System.out.println();
 
-		for (int i = 0; i < customStudentList.customListSize() - 1; i++) {
+		for (int i = 0; i < customStudentList.customListSize(); i++) {
 
 			System.out.print(customStudentList.getIndexOf(i).getId() + "   ");
 			System.out.print(customStudentList.getIndexOf(i).getName() + "   ");
@@ -54,7 +54,7 @@ public class App {
 		System.out.println("New Print after removing");
 		System.out.println();
 
-		for (int i = 0; i < customStudentList.customListSize() - 1; i++) {
+		for (int i = 0; i < customStudentList.customListSize(); i++) {
 
 			System.out.print(customStudentList.getIndexOf(i).getId() + "   ");
 			System.out.print(customStudentList.getIndexOf(i).getName() + "   ");
@@ -69,7 +69,21 @@ public class App {
 		System.out.println("New Print after specific item removing");
 		System.out.println();
 
-		for (int i = 0; i < customStudentList.customListSize() - 1; i++) {
+		for (int i = 0; i < customStudentList.customListSize(); i++) {
+
+			System.out.print(customStudentList.getIndexOf(i).getId() + "   ");
+			System.out.print(customStudentList.getIndexOf(i).getName() + "   ");
+			System.out.print(customStudentList.getIndexOf(i).getDepartment());
+			System.out.println();
+
+		}
+		
+		
+		customStudentList.replaceWithList(studentList);
+		System.out.println();
+		System.out.println("New Print after replacing with list");
+		System.out.println();
+		for (int i = 0; i < customStudentList.customListSize(); i++) {
 
 			System.out.print(customStudentList.getIndexOf(i).getId() + "   ");
 			System.out.print(customStudentList.getIndexOf(i).getName() + "   ");

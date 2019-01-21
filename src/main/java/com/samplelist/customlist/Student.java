@@ -16,6 +16,7 @@ public class Student {
 		this.name = name;
 		this.department = department;
 	}
+	
 	public int getId() {
 		return id;
 	}

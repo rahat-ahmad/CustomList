@@ -38,7 +38,7 @@ public class CustomList<T> {
 			customArray[i] = customArray[i+1];
 		}
 		
-		return this;
+		return this.remove();
 		
 	}
 	
@@ -55,9 +55,19 @@ public class CustomList<T> {
 		return this;
 		
 	}
+	
+	public CustomList<T> replaceWithList(List<T> list){
+		customArray = Arrays.copyOf(customArray, 1);
+		for(T t:list) {
+			add(t);
+		}
+		
+		return this;
+		
+	}
 	public int customListSize() {
 		
-		return customArray.length;
+		return customArray.length-1;
 	}
 	
 	
