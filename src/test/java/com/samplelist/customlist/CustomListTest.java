@@ -27,11 +27,9 @@ public class CustomListTest {
 		
 		studentCustomList = new CustomList<Student>().add(new Student(1, "Rahat", "CS"));
 		student = new Student(1, "Rahat", "CS");
-		for(int i = 0; i < studentCustomList.customListSize()-1;i++) {
-			assertEquals(student.getId(), studentCustomList.getIndexOf(i).getId());
-			assertEquals(student.getName(), studentCustomList.getIndexOf(i).getName());
-			assertEquals(student.getDepartment(), studentCustomList.getIndexOf(i).getDepartment());
-		}
+		assertEquals(student.getId(), studentCustomList.getIndexOf(0).getId());
+		assertEquals(student.getName(), studentCustomList.getIndexOf(0).getName());
+		assertEquals(student.getDepartment(), studentCustomList.getIndexOf(0).getDepartment());
 	}
 
 	@Test
@@ -52,9 +50,6 @@ public class CustomListTest {
 		studentList = Arrays.asList(new Student(1, "Rahat", "CS"),new Student(2, "Aniruddha", "EEE"),new Student(3, "Riad", "CS"));
 		studentCustomList = new CustomList<Student>().replaceWithList(studentList);
 		studentCustomList.removeIndexOf(1);
-		for(int i = 0; i < studentCustomList.customListSize()-1;i++) {
-			System.out.println(studentCustomList.getIndexOf(i).getId());
-		}
 		for(int i = 0; i < studentCustomList.customListSize()-1;i++) {
 			assertNotEquals(new Student(2, "Aniruddha", "EEE").getId(), studentCustomList.getIndexOf(i).getId());
 		}
